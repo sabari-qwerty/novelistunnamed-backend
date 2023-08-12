@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categaries",
+  "info": {
+    "singularName": "categary",
+    "pluralName": "categaries",
+    "displayName": "Categary",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "posts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::post.post",
+      "mappedBy": "categaries"
+    }
+  }
+}
